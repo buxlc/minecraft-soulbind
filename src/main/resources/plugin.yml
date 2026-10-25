@@ -1,0 +1,22 @@
+name: SoulBind
+version: 1.0.0
+main: cn.bucheng.soulbind.SoulBindPlugin
+api-version: '26.2'
+description: 灵魂绑定 - 死亡保留、上线召回与个人绑定仓库
+author: Bucheng
+depend: [Vault]
+commands:
+  soulbind:
+    description: 打开灵魂绑定菜单
+    aliases: [sb, linghun, 灵魂绑定]
+    usage: /soulbind [settings|vault|admin|reload]
+permissions:
+  soulbind.use:
+    description: 使用灵魂绑定及个人仓库
+    default: true
+  soulbind.admin:
+    description: 管理入口、免费强制解绑任何人的物品、拾取任何绑定物品
+    default: op
+  soulbind.reload:
+    description: 重载语言和价格配置
+    default: op

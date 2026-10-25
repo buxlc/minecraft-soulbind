@@ -1,0 +1,94 @@
+# 支持 & 颜色码。占位符保留原样；修改后 /soulbind reload。
+prefix: '&8[&d灵魂绑定&8] &r'
+lore:
+  bound: '&8[&d灵魂绑定&8] &7绑定者：&f{owner}'
+messages:
+  player-only: '&c请在游戏中执行此命令。'
+  no-permission: '&c你没有使用此功能的权限。'
+  reloaded: '&a语言、价格及默认设置已重载。'
+  reload-failed: '&c配置无效，保留了原配置。请检查后台：{error}'
+  select-item: '&e请先点击下方背包里的物品，提交一件物品。'
+  need-space: '&e请先腾出一个背包空格，绑定后的物品需要单独存放。'
+  selection-changed: '&c选中的物品已移动或发生变化，请重新提交。'
+  already-bound: '&c此物品已经绑定。'
+  not-bound: '&c此物品尚未绑定。'
+  not-owner: '&c只有绑定者可以付费解绑自己的物品。'
+  invalid-item: '&c此物品不能绑定：{error}'
+  stale-item: '&c该绑定物品已失效，请重新选择。'
+  no-economy: '&c当前没有可用的 Vault 经济服务，请联系管理员。'
+  insufficient-funds: '&c余额不足，本次操作需要 {price} 金币。'
+  payment-failed: '&c扣款失败：{error}'
+  operation-failed: '&c操作失败，物品已保留：{error}'
+  refund-failed: '&c自动退款失败，请联系管理员处理 {price} 金币。'
+  bound: '&a绑定成功！花费 {price} 金币。'
+  unbound: '&a解绑成功！花费 {price} 金币。'
+  admin-unbound: '&a已免费强制解绑该物品。'
+  setting-saved: '&a设置已保存。'
+  vault-full: '&e背包空间不足，物品仍保存在绑定仓库。'
+  vault-withdrawn: '&a已领取一件仓库物品。'
+  help: '&e/soulbind &7打开菜单；&e/soulbind settings &7个人设置；&e/soulbind vault &7绑定仓库。'
+errors:
+  generic: '请联系管理员检查后台记录。'
+  not-single: '每次只能处理一件物品。'
+  already-bound: '此物品已经绑定。'
+  not-bound: '此物品尚未绑定。'
+  stale: '绑定物品已失效。'
+  nested-bound: '请先取出容器内的绑定物品。'
+core:
+  drop-denied: '&c你已禁止丢弃绑定物品，可在个人绑定模式中修改。'
+  pickup-denied: '&c物品主人禁止他人拾取此绑定物品。'
+  processing-denied: '&c请先解绑，再将此物品用于合成、熔炼或加工。'
+  nested-denied: '&c绑定物品不能放入潜影盒或收纳袋，请使用普通箱子。'
+  recalled: '&a已召回 {count} 件绑定物品，背包放不下的部分已存入绑定仓库。'
+  warehouse-returned: '&a已从绑定仓库返还 {count} 件物品。'
+  persistence-error: '&c绑定数据保存失败，请联系管理员。'
+  stale-cleared: '&e已清理失效的绑定物品副本。'
+gui:
+  main-title: '&5灵魂绑定'
+  admin-title: '&4灵魂绑定 · 管理'
+  settings-title: '&5灵魂绑定 · 个人模式'
+  vault-title: '&5绑定仓库 &8· {page}/{pages}'
+  empty-input:
+    name: '&e点击背包中的物品提交'
+    lore: ['&7每次处理 1 件物品。', '&7上方显示预览，确认时才处理背包物品。']
+  selected:
+    name: '&e待处理物品'
+    lore: ['&7已选择：{item}', '&7点击此处取消选择。']
+  bind:
+    name: '&a绑定物品'
+    lore: ['&7花费：&e{price} 金币 / 件', '&7绑定后死亡保留，并显示绑定者。']
+  unbind:
+    name: '&c解绑物品'
+    lore: ['&7花费：&e{price} 金币 / 件', '&7仅可解绑自己绑定的物品。']
+  settings:
+    name: '&b个人绑定模式'
+    lore: ['&7设置丢弃、上线返还及他人拾取。']
+  vault:
+    name: '&d绑定仓库'
+    lore: ['&7暂存背包放不下的返还物品。', '&7点击进入并领取。']
+  admin:
+    name: '&4管理员入口'
+    lore: ['&7需要 soulbind.admin 权限。', '&7免费强制解绑任何人的绑定物品。']
+  force-unbind:
+    name: '&c免费强制解绑'
+    lore: ['&7提交背包中任意绑定物品后点击。', '&7不会扣费，无视物品主人。']
+  back:
+    name: '&e返回'
+    lore: []
+  previous:
+    name: '&e上一页'
+    lore: []
+  next:
+    name: '&e下一页'
+    lore: []
+  allow-drop:
+    name: '&e允许自己丢弃：{state}'
+    lore: ['&7控制 Q 键、Ctrl+Q 和背包界面丢弃。', '&7丢出后仍会受到火、岩浆及自然消失影响。']
+  auto-return:
+    name: '&b上线自动返还：{state}'
+    lore: ['&7上线时召回尚未被销毁的绑定物品。', '&7背包已满时存入绑定仓库。']
+  allow-others-pickup:
+    name: '&d允许他人拾取：{state}'
+    lore: ['&7管理员始终可以拾取绑定物品。']
+  enabled: '&a开启'
+  disabled: '&c关闭'

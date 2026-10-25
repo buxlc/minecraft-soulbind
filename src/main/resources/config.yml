@@ -1,0 +1,11 @@
+# 价格必须是大于等于 0 的有限数字。每次绑定/解绑 1 件物品。
+prices:
+  bind: 1000.0
+  unbind: 1000.0
+# 新玩家的默认模式；玩家可在 GUI 中自行修改，修改会持久保存。
+defaults:
+  allow-drop: false
+  auto-return: true
+  allow-others-pickup: false
+# 核心维护间隔（tick），20 tick = 1 秒。
+maintenance-ticks: 100
